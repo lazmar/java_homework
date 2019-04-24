@@ -4,18 +4,6 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/HM" />
-        <option name="gradleHome" value="C:/Tools/gradle-2.10-all/gradle-2.10" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/HM" />
-          </set>
-        </option>
-        <option name="useAutoImport" value="true" />
-        <option name="useQualifiedModuleNames" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/sandbox" />
         <option name="gradleHome" value="C:/Tools/gradle-2.10-all/gradle-2.10" />
         <option name="modules">
