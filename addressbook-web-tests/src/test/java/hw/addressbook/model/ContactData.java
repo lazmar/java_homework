@@ -1,4 +1,4 @@
-package hw.addressbook;
+package hw.addressbook.model;
 
 public class ContactData {
     private final String firstname;
