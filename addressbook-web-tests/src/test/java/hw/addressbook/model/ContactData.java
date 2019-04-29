@@ -75,9 +75,7 @@ public class ContactData {
         return company;
     }
 
-    public String getAddress() {
-        return address;
-    }
+    public String getAddress() { return address; }
 
     public String getMobile() {
         return mobile;
