@@ -1,6 +1,7 @@
 package hw.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -17,12 +18,26 @@ public class HelperBase {
 
     protected void type(By locator, String text) {
         click(locator);
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+        if (text != null) {
+            String existingText = wd.findElement(locator).getAttribute("value");
+            if (! text.equals(existingText)) {
+                wd.findElement(locator).clear();
+                wd.findElement(locator).sendKeys(text);
+            }
+        }
     }
 
     protected void clickAndSelect(By locator, String valueFromContactData) {
         wd.findElement(locator).click();
         new Select(wd.findElement(locator)).selectByVisibleText(valueFromContactData);
     }
+
+    protected boolean isElementPresent(By locator) {
+        try {wd.findElement(locator);
+            return true;
+    } catch (NoSuchElementException ex) {
+            return false;
+        }
+
+        }
 }
