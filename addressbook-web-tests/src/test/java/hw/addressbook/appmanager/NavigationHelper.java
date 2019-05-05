@@ -20,9 +20,6 @@ public class NavigationHelper extends HelperBase{
     }
 
     public void gotoNewContact() {
-        if (isElementPresent(By.id("maintable"))){
-            return;
-        }
         click(By.linkText("add new"));
     }
 }
